@@ -11,9 +11,19 @@ const Crypto = ({ name, price, symbol, marketcap, volume, image, priceChange }) 
 					<p classname="crypto-symbol">{symbol}</p>
 				</div>
 				<div className="crypto-data" />
-                <p className = 'crypto-price'>${price}</p>
-                <p className = 'crypto-volume'>${volume.toLocaleString()}</p>
+				<p className="crypto-price">${price}</p>
+				<p className="crypto-volume">${volume.toLocaleString()}</p>
 
+				{priceChange < 0 ? (
+					<p className="crypto-percent" red>
+						{priceChange.toFixed(2)}%
+					</p>
+				) : (
+					<p className="crypto-percent" green>
+						{priceChange.toFixed(2)}%
+					</p>
+				)}
+				<p className="crypto-marketcap">Mkt Cap : ${marketcap.toLocaleString()}</p>
 			</div>
 		</div>
 	);
@@ -36,3 +46,5 @@ export default Crypto;
 // when you pass in undefined it is looking for the users exact location to convert the currency specifically to the area
 // then you use getPrice(1222) this will return the currency in the specic currency of your location.
 //}
+
+// toFixed(2) 'he toFixed() method converts a number into a string, rounding to a specified number of decimals.'
