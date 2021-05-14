@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Crypto from './Crypto'
+import './App.css'
 function App() {
 	const [ cryptos, setCrypto ] = useState([]);
   const [search, setSearch] = useState('')

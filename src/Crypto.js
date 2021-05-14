@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Crypto.css'
 // this is destructuring the data below.
 const Crypto = ({ name, price, symbol, marketcap, volume, image, priceChange }) => {
 	return (

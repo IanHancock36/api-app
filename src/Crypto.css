@@ -1,0 +1,13 @@
+.crypto-container{
+    display: flex;
+    justify-content: center;
+}
+.crypto-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid;
+    width: 800px;
+}
