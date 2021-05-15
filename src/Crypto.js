@@ -1,25 +1,26 @@
 import React from 'react';
 import './Crypto.css'
-// this is destructuring the data below.
+// this is destructuring the data below. destructuring object passed as an argument in the function. 
 const Crypto = ({ name, price, symbol, marketcap, volume, image, priceChange }) => {
 	return (
 		<div className="crypto-container">
 			<div className="crypto-row">
 				<div className="crypto">
-					<image src={image} />
-					<h1>{name}</h1>
-					<p classname="crypto-symbol">{symbol}</p>
+				<img src={image} alt='crypto' />
+				<h1>{name}</h1>
+				
+				<p className="crypto-symbol">{symbol}</p>
 				</div>
 				<div className="crypto-data" />
 				<p className="crypto-price">${price}</p>
-				<p className="crypto-volume">${volume.toLocaleString()}</p>
+				<p className="crypto-volume">${volume.toLocaleString(undefined)}</p>
 
 				{priceChange < 0 ? (
-					<p className="crypto-percent" red>
+					<p className='crypto-percent red'>
 						{priceChange.toFixed(2)}%
 					</p>
 				) : (
-					<p className="crypto-percent" green>
+					<p className='crypto-percent green'>
 						{priceChange.toFixed(2)}%
 					</p>
 				)}

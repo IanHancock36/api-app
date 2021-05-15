@@ -7,7 +7,73 @@
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    height: 80px;
-    border-bottom: 1px solid;
-    width: 800px;
+    height: 5rem;
+    border-bottom: 0.063rem solid;
+    width: 50rem;
+}
+.crypto-container{
+    display: flex;
+    justify-content: center;
+}
+.crypto-symbol{
+    text-transform: uppercase;
+}
+.crypto-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    height: 5rem;
+    width: 50rem;
+    border-bottom: 0.063rem solid #ffff;
+}
+.crypto-text{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.crypto{
+   display: flex;
+   align-items: center;
+   padding-right: 1.25rem;
+   min-width: 18.75rem;
+ 
+}
+.crypto h1{
+    font-size: 1rem;
+    width: 9.375rem;
+}
+.crypto img{
+    height: 1.875rem;
+    width: 1.875rem;
+    margin-right:0.625rem;
+}
+
+.crypto-data{
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+    text-align: right;
+   
+}
+.crypto-price{
+    width: 6.25rem;
+}
+.crypto-price{
+    width: 12.5rem;
+}
+.crypto-marketcap{
+    width:12.5rem;
+}
+.crypto-volume{
+    width: 12.5rem;
+
+}
+
+
+.red{
+    color: #DC143C;
+}
+.green{
+    color:#4CBB17	
+    
 }
