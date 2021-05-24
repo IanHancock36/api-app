@@ -1,6 +1,8 @@
 .crypto-container{
     display: flex;
     justify-content: center;
+  
+    
 }
 
 
@@ -19,7 +21,6 @@
 .crypto-data{
     display: flex;
     justify-content: space-between;
-    
     text-align: right;
    
 }
@@ -36,6 +37,7 @@
  
 }
 .crypto h1{
+   
     font-size: 1rem;
     width: 9.375rem;
 }
