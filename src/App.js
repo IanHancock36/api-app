@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Crypto from './Crypto'
-import './App.css'
+import Crypto from './Crypto';
+import './App.css';
 function App() {
-  const [ cryptos, setCryptos ] = useState([]);
-  const [search, setSearch] = useState('')
+	const [ cryptos, setCryptos ] = useState([]);
+	const [ search, setSearch ] = useState('');
 	useEffect(() => {
 		axios
 			.get(
@@ -15,39 +15,39 @@ function App() {
 			})
 			.catch((error) => console.log(error));
 	}, []);
-  
-  const handleChange = event => {
-    setSearch(event.target.value)
-    console.log(event.target.value)
-  };
-  const filteredCryptos = cryptos.filter(crypto =>
-    crypto.name.toLowerCase().includes(search.toLowerCase())
-    )
+
+	const handleChange = (event) => {
+		setSearch(event.target.value);
+		console.log(event.target.value);
+	};
+	const filteredCryptos = cryptos.filter((crypto) => crypto.name.toLowerCase().includes(search.toLowerCase()));
 	return (
-		<div className="crypto-app">
+		<div>
 			<div className="crypto-search">
 				<h1 className="crypto-text"> Seawolf Crypto</h1>
 				<form>
 					<input type="text" placeholder="Search" className="crypto-input" onChange={handleChange} />
 				</form>
 			</div>
-    {filteredCryptos.map(crypto =>{
-      return <Crypto 
-	  			key={crypto.id}
-				name={crypto.name}
-				price={crypto.current_price}
-				symbol={crypto.symbol}
-				marketcap={crypto.total_volume}
-				image={crypto.image}
-				priceChange={crypto.price_change_percentage_24h}
-				volume={crypto.market_cap}
-			/>
-    })}
+
+			{filteredCryptos.map((crypto) => {
+				return (
+					<Crypto
+						key={crypto.id}
+						name={crypto.name}
+						price={crypto.current_price}
+						symbol={crypto.symbol}
+						marketcap={crypto.total_volume}
+						image={crypto.image}
+						priceChange={crypto.price_change_percentage_24h}
+						volume={crypto.market_cap}
+					/>
+				);
+			})}
 		</div>
 	);
 }
 
 export default App;
 
-
-// I could return a spread of coin instead of listing evererything out possibly? 
+// I could return a spread of coin instead of listing evererything out possibly?

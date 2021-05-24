@@ -7,19 +7,11 @@
   font-family: 'Montserrat', sans-serif;
   background-color:#000;
   color: #fff;
- 
-
-}
+ }
 
 .crypto-app{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-top: 3.125rem; 
-  align-items: center;
   color:#fff;
-  
-  
 }
 
 .crypto-search{
@@ -30,13 +22,15 @@
   align-items: center;
 }
 
+
 .crypto-text{
   margin-bottom: 2rem;
   text-align: center;
+ 
 }
 .crypto-input{
   padding-left: 1rem;
-  width: 18.75rem;
+  /* width: 18.75rem; */
   height: 3.125rem;
   border-radius: 3px;
   border:none;
