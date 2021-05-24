@@ -1,4 +1,5 @@
 /* universal selector below */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
 *{
   box-sizing: border-box;
   margin: 0;
@@ -26,11 +27,11 @@
 }
 
 .crypto-text{
-  margin-bottom: 3.125rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 .crypto-input{
-  padding-left: 16px;
+  padding-left: 1rem;
   width: 18.75rem;
   height: 3.125rem;
   border-radius: 3px;
