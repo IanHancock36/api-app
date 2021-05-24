@@ -9,7 +9,7 @@
     align-items: center;
     height: 5rem;
     border-bottom: 0.063rem solid;
-    width: 50rem;
+    width: 50rem; 
 }
 .crypto-container{
     display: flex;
@@ -55,17 +55,21 @@
     text-align: right;
    
 }
-.crypto-price{
-    width: 6.25rem;
+.crypto-percent{
+    width: 100%;
+   
 }
 .crypto-price{
     width: 12.5rem;
+    
 }
 .crypto-marketcap{
     width:12.5rem;
+    
 }
 .crypto-volume{
     width: 12.5rem;
+   
 
 }
 
@@ -77,3 +81,7 @@
     color:#4CBB17	
     
 }
+
+/* need to add a hover effect over each crypto coin and a border box around */
+/* need to add a logo and styling */
+/* need to finish spacing out of the numbers */

@@ -19,7 +19,7 @@
 
 .crypto-search{
   margin-bottom: 3.125rem;
-  display: 'flex'; 
+  display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
