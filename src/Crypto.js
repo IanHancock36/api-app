@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import './Crypto.css';
 
@@ -29,11 +30,63 @@ const Crypto = ({ name, price, symbol, marketcap, volume, image, priceChange }) 
 </div>
 		
 	);
+=======
+import React from "react";
+import "./cryptoItem.modules.css";
+// this is destructuring the data below. destructuring object passed as an argument in the function.
+const Crypto = ({
+  name,
+  price,
+  symbol,
+  marketcap,
+  volume,
+  image,
+  priceChange,
+}) => {
+  return (
+    <div className="crypto-item">
+      <div className="item-cell">
+        <img className="cell-image" src={image} />
+      </div>
+      <div className="item-cell">
+        <div>{name}</div>
+      </div>
+      <div className="item-cell">{symbol}</div>
+      <div className="item-cell">{price}</div>
+      <div className="item-cell">
+        <p className={priceChange < 0 ? "percent-red" : "percent-green"}>
+          {priceChange.toLocaleString(2)}%
+        </p>
+      </div>
+    </div>
+  );
+>>>>>>> 0712c1888f259ca183a4307cdc706a18d009ad17
 };
 
 export default Crypto;
 
+<<<<<<< HEAD
 
+=======
+// <div className="crypto-row">
+// 	<div className="crypto">
+// 		<img src={image} alt="crypto-logo"/>
+// 		<h1>{name}</h1>
+
+// 		<p className="crypto-symbol">{symbol}</p>
+// 	</div>
+// 	<div>
+//        <p className="crypto-price">${price}</p>
+// 	</div>
+// 	<div>
+// 	<p className="crypto-volume">${volume.toLocaleString(undefined)}</p>
+// 	</div>
+// 	<div>
+//
+// 	<p className="crypto-marketcap">Mkt Cap : ${marketcap.toLocaleString()}</p>
+// 	</div>
+// </div>
+>>>>>>> 0712c1888f259ca183a4307cdc706a18d009ad17
 
 //.toLocaleString() this is helps convert currency to the persons location.
 // example const options = { style: 'currency, currency: 'eur'} const number = 2500.5

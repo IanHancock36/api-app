@@ -1,14 +1,21 @@
+<<<<<<< HEAD
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
+=======
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import "./Index.css";
+>>>>>>> 0712c1888f259ca183a4307cdc706a18d009ad17
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

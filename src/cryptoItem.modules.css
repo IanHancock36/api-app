@@ -1,0 +1,35 @@
+.crypto-item {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: no-wrap;
+  width: 100%;
+  padding: 0.5rem 0.2rem;
+  border-bottom: 1px solid white;
+  align-items: center;
+  text-align: justify;
+}
+
+.item-cell {
+  font-size: 1.2rem;
+  text-align: center;
+  width: 20%;
+}
+
+.cell-image {
+  height: 25px;
+  width: 25px;
+  margin-right: 2rem;
+}
+
+.cell-header {
+  display: flex;
+  align-items: center;
+}
+
+.percent-red {
+  color: red;
+}
+
+.percent-green {
+  color: green;
+}
