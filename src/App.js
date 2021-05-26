@@ -3,6 +3,7 @@ import axios from "axios";
 import Crypto from "./Crypto";
 import "./App.modules.css";
 
+
 function App() {
   const [cryptos, setCryptos] = useState([]);
   const [search, setSearch] = useState("");
@@ -37,10 +38,12 @@ function App() {
           />
         </form>
       </div>
-
+	
+	
       {filteredCryptos.map(crypto => {
         return (
-          <Crypto
+			
+				 <Crypto
             key={crypto.id}
             name={crypto.name}
             price={crypto.current_price}
