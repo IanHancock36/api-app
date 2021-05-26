@@ -1,5 +1,8 @@
 import React from 'react';
 import './Crypto.css';
+
+// Need to use a table on this instead of what we are doing now.  
+
 // this is destructuring the data below. destructuring object passed as an argument in the function.
 const Crypto = ({ name, price, symbol, marketcap, volume, image, priceChange }) => {
 	return (
@@ -12,34 +15,25 @@ const Crypto = ({ name, price, symbol, marketcap, volume, image, priceChange }) 
 			</div>
 			<div className="item-cell">{symbol}</div>
 			<div className="item-cell">{price}</div>
-		</div>
+			<div>
+	<p className="crypto-volume">${volume.toLocaleString(undefined)}</p>
+	</div>
+	<div>
+	{priceChange < 0 ? (
+		<p className="crypto-percent red">{priceChange.toFixed(2)}%</p>
+	) : (
+		<p className="crypto-percent green">{priceChange.toFixed(2)}%</p>
+	)}
+	<p className="crypto-marketcap">Mkt Cap : ${marketcap.toLocaleString()}</p>
+	</div>
+</div>
+		
 	);
 };
 
 export default Crypto;
 
-// <div className="crypto-row">
-// 	<div className="crypto">
-// 		<img src={image} alt="crypto-logo"/>
-// 		<h1>{name}</h1>
 
-// 		<p className="crypto-symbol">{symbol}</p>
-// 	</div>
-// 	<div>
-//        <p className="crypto-price">${price}</p>
-// 	</div>
-// 	<div>
-// 	<p className="crypto-volume">${volume.toLocaleString(undefined)}</p>
-// 	</div>
-// 	<div>
-// 	{priceChange < 0 ? (
-// 		<p className="crypto-percent red">{priceChange.toFixed(2)}%</p>
-// 	) : (
-// 		<p className="crypto-percent green">{priceChange.toFixed(2)}%</p>
-// 	)}
-// 	<p className="crypto-marketcap">Mkt Cap : ${marketcap.toLocaleString()}</p>
-// 	</div>
-// </div>
 
 //.toLocaleString() this is helps convert currency to the persons location.
 // example const options = { style: 'currency, currency: 'eur'} const number = 2500.5
@@ -58,3 +52,6 @@ export default Crypto;
 //}
 
 // toFixed(2) 'he toFixed() method converts a number into a string, rounding to a specified number of decimals.'
+
+
+
