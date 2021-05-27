@@ -1,11 +1,13 @@
+import { Table } from 'reactstrap';
 import React from 'react';
-import './cryptoItem.modules.css';
+// import './cryptoItem.modules.css';
+
 // this is destructuring the data below. destructuring object passed as an argument in the function.
 const Crypto = ({ name, price, symbol, marketcap, volume, image, priceChange }) => {
 	return (
 		// <div className="crypto-item">
 		// 	<div className="item-cell">
-/* 				
+		/* 				
 			<img className="cell-image" src={image} /> 
 			</div>
 			<div className="item-cell">
@@ -26,21 +28,23 @@ const Crypto = ({ name, price, symbol, marketcap, volume, image, priceChange }) 
 		
 	);
 }; */
-<div>
-<td>
-	<tr>	<img className="cell-image" src={image} /> </tr>
-	<tr>{name}</tr>
-	<tr>{symbol}</tr>
-	<tr>{price}</tr>
-	<tr>{priceChange < 0 ? 'percent-red' : 'percent-green'}{priceChange.toLocaleString(2)}%</tr>
-	<tr>${volume.toLocaleString(undefined)}</tr>
-	<tr>Mkt Cap : ${marketcap.toLocaleString()}</tr>
-</td>
-  </div>
-);
+		<div>
+			<Table dark>
+				<tr>	
+				<img className="cell-image" src={image} />
+				</tr>
+				<tr>{name}</tr>
+				<tr>{symbol}</tr>
+				<tr>{price}</tr>
+				<tr>
+					{priceChange < 0 ? 'percent-red' : 'percent-green'}
+					{priceChange.toLocaleString(2)}%
+				</tr>
+				<tr>${volume.toLocaleString(undefined)}</tr>
+				<tr>Mkt Cap : ${marketcap.toLocaleString()}</tr>
+			</Table>
+		</div>
+	);
 };
 
 export default Crypto;
-
-
-

@@ -28,7 +28,8 @@ function App() {
   return (
     <div className="app">
       <div className="crypto-search">
-        <h1 className="crypto-text"> Seawolf Crypto</h1>
+        <img src='./wolfy.jpeg' alt='wolfpic'/>  
+        <h1 className="crypto-text"> Seawolf Crypto</h1> 
         <form>
           <input
             type="text"
