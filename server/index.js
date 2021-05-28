@@ -20,12 +20,23 @@ app.post('/payment', cors(), async (req,res)=> {
          payment_method: id, 
          confirm: true
      })
-     
+     console.log('payment', payment)
+     res.json({
+         message: "Payment Successful",
+         success: true
+     })
  } catch (error) {
-     
+     console.log('Error',error)
+     res.json({
+         message: 'Payment Failed',
+         success: false
+     })
  }
 })
 
 app.listen(process.env.PORT || 4000, () => {
 	console.log('server is listening on portt 4000');
 });
+
+
+//  this whole page I need to research more. 
