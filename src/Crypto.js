@@ -30,19 +30,35 @@ const Crypto = ({ name, price, symbol, marketcap, volume, image, priceChange }) 
 		// };
 		// Below is using React strap to make a table
 		<Table responsive>
-			<tr>
+	
+			<th>
+			
 				<td>
 				<img src={image} />
 				</td>
+			<th>
+			
 				<td>{name}</td>
-				<td>{symbol}</td>
+			</th>
+			<th>
+			
+			<td>{symbol}</td>
+			</th>
+			
+				<th>
+			
 				<td>{price}</td>
-				<td>
-				{/* <p className={priceChange < 0 ? 'percent-red' : 'percent-green'}>{priceChange.toLocaleString(2)}%</p> */}
+				</th>
+				
+				
+			
+				{/* <td>
+				<p className={priceChange < 0 ? 'percent-red' : 'percent-green'}>{priceChange.toLocaleString(2)}%</p>
 				</td>
 				<td>${volume.toLocaleString(undefined)}</td>
-				<td>Mkt Cap : ${marketcap.toLocaleString()}</td>
-			</tr>
+				<td>Mkt Cap : ${marketcap.toLocaleString()}</td> */}
+			</th>
+	
 		</Table>
 	);
 };
