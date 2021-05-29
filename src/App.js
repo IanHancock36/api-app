@@ -48,7 +48,7 @@ function App() {
 					/>
 				);
 			})}
- <StripeStore />
+ {/* <StripeStore /> */}
  
     
 		</div>
