@@ -33,7 +33,7 @@ const PaymentForm = () => {
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
-		const [ error, payementMethod ] = await stripe.createPaymentMethod({
+		const { error, payementMethod } = await stripe.createPaymentMethod({
 			type: 'card',
 			card: elements.getElement(CardElement)
 		});
@@ -43,7 +43,7 @@ const PaymentForm = () => {
 				const { id } = payementMethod;
 				const response = await axios.post('http//localhost:4000/payment', {
 					amount: 1000,
-					id
+					
 				});
 
 				if (response.data.success) {
