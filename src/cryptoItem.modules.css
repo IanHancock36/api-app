@@ -8,11 +8,13 @@
   align-items: center;
   text-align: justify;
 }
-
+.noWrap{
+  white-space: nowrap;
+}
 .item-cell {
   font-size: 1.2rem;
   text-align: center;
-  width: 20%;
+  width: 10%;
 }
 
 .cell-image {
