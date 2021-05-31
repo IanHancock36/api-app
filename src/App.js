@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Crypto from './Crypto';
 import './App.modules.css';
+import {debounce} from 'lodash'
 import StripeStore from './StripeStore';
 
 
@@ -20,9 +21,15 @@ function App() {
 	}, []);
 
 	const handleChange = (event) => {
-		setSearch(event.target.value);
+		handleText(event.target.value);
 		console.log(event.target.value);
 	};
+
+	const handleText = (text) => {
+	const deb = debounce(()=> setSearch(text),1000 );
+	deb()
+
+	} 
 	const filteredCryptos = cryptos.filter((crypto) => crypto.name.toLowerCase().includes(search.toLowerCase()));
 	return (
 		<div className="app">

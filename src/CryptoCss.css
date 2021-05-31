@@ -11,3 +11,6 @@
     color: green;
   }
   
+  .noWrap{
+    white-space: nowrap;
+  }
