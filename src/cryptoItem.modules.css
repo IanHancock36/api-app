@@ -1,4 +1,4 @@
-.crypto-item {
+ .crypto-item {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: no-wrap;
@@ -8,15 +8,12 @@
   align-items: center;
   text-align: justify;
 }
-.noWrap{
-  white-space: nowrap;
-}
+
 .item-cell {
   font-size: 1.2rem;
   text-align: center;
   width: 10%;
 }
-
 .cell-image {
   height: 25px;
   width: 25px;
@@ -26,7 +23,7 @@
 .cell-header {
   display: flex;
   align-items: center;
-}
+} 
 
 .percent-red {
   color: red;

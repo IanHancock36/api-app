@@ -1,0 +1,13 @@
+.cell-image {
+    height: 25px;
+    width: 25px;
+    /* margin-right: 2rem; */
+  }
+  .percent-red {
+    color: red;
+  }
+  
+  .percent-green {
+    color: green;
+  }
+  
