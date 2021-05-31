@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import Crypto from './Crypto';
 import './App.modules.css';
-import {debounce} from 'lodash'
+import { debounce } from 'lodash';
 import StripeStore from './StripeStore';
-
 
 function App() {
 	const [ cryptos, setCryptos ] = useState([]);
@@ -24,12 +23,11 @@ function App() {
 		handleText(event.target.value);
 		console.log(event.target.value);
 	};
+	const deb = useCallback(debounce((text) => setSearch(text), 1000), [ 1000 ]);
 
 	const handleText = (text) => {
-	const deb = debounce(()=> setSearch(text),1000 );
-	deb()
-
-	} 
+		deb(text);
+	};
 	const filteredCryptos = cryptos.filter((crypto) => crypto.name.toLowerCase().includes(search.toLowerCase()));
 	return (
 		<div className="app">
@@ -55,9 +53,7 @@ function App() {
 					/>
 				);
 			})}
- {/* <StripeStore /> */}
- 
-    
+			{/* <StripeStore /> */}
 		</div>
 	);
 }
