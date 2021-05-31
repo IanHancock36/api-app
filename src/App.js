@@ -23,11 +23,11 @@ function App() {
 		handleText(event.target.value);
 		console.log(event.target.value);
 	};
-	const deb = useCallback(debounce((text) => setSearch(text), 1000), [ 1000 ]);
+	// const deb = useCallback(debounce((text) => setSearch(text), 1000), [ 1000 ]);
 
-	const handleText = (text) => {
-		deb(text);
-	};
+	const handleText = debounce((text) => {
+		setSearch(text);
+	},500);
 	const filteredCryptos = cryptos.filter((crypto) => crypto.name.toLowerCase().includes(search.toLowerCase()));
 	return (
 		<div className="app">
