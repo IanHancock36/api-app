@@ -1,7 +1,9 @@
-import React from 'react'
-import { Table, Container } from 'reactstrap';
+import React from 'react';
+import { Table }from 'reactstrap';
+import { Col ,Row} from 'reactstrap';
+
 // import './cryptoItem.modules.css';
-import './CryptoCss.css'
+import './CryptoCss.css';
 
 // this is destructuring the data below. destructuring object passed as an argument in the function.
 const Crypto = ({ name, price, symbol, marketcap, volume, image, priceChange }) => {
@@ -30,37 +32,50 @@ const Crypto = ({ name, price, symbol, marketcap, volume, image, priceChange }) 
 		// 	);
 		// };
 		// Below is using React strap to make a table
-		<Container>
-		<Table bordered responsive className='noWrap'>
-			<thead>
-				<tr>
-				
-					<th>Img</th>
-					<th>Name:</th>
-					<th>Price:</th>
-					<th>Change:</th>
-					<th>Volume:</th>
-					<th>Mkt Cap:</th>
-				
+	
+			<Table bordered responsive className='no-Wrap'>
+				<thead>
 					
-				</tr>
-			</thead>
-			<tbody>
-        <tr>
-          <th scope="row"><img className="cell-image" src={image}/></th>
-         
-		  <td> {name}</td>
-		  <td>${price}</td>
-		  <td><p className={priceChange < 0 ? 'percent-red' : 'percent-green'}>{priceChange.toLocaleString(2)}%</p></td>
-          <td>${volume.toLocaleString(undefined)}</td>
-		  <td>${marketcap.toLocaleString()}</td>
-        </tr>
-       
-       </tbody>
-		</Table>
-		</Container>
+					<tr scope='row'>
+			
+						
+						<th className="text-center">Img</th>
+						<th  colSpan="250"className="text-center">Name</th>
+						<th  colSpan="250"className="text-center">Price</th>
+						<th colSpan="250" className="text-center">Change</th>
+						<th  colSpan="250"className="text-center">Volume</th>
+						<th  colSpan="250"className="text-center">Mkt Cap</th>
+					
+					</tr>
+					
+				</thead>
+				<tbody>
+					
+					<tr scope = 'row'>
+				
+				
+						<td className="text-center">
+							<img className="cell-image" src={image} />
+						</td>
+						<td colSpan="250" className="text-center"> {name}</td>
+						<td  colSpan="250"className="text-center"> ${price.toLocaleString()}</td>
+						<td  colSpan="250" className="text-center">
+							<p className={priceChange < 0 ? 'percent-red' : 'percent-green'}>
+								{priceChange.toLocaleString(2)}%
+							</p>
+						</td>
+						<td  colSpan="250"className="text-center"> ${volume.toLocaleString(undefined)}</td>
+						<td  className="text-center"> ${marketcap.toLocaleString()}</td>
+					
+						
+					</tr>
+					
+				</tbody>
+			</Table>
+	
 
 		//
+		
 	);
 };
 
