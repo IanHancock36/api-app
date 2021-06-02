@@ -23,7 +23,7 @@ function App() {
 		handleText(event.target.value);
 		console.log(event.target.value);
 	};
-	// const deb = useCallback(debounce((text) => setSearch(text), 1000), [ 1000 ]);
+
 
 	const handleText = debounce((text) => {
 		setSearch(text);
@@ -32,7 +32,9 @@ function App() {
 	return (
 		<div className="app">
 			<div className="crypto-search">
-				<img className="wolflogo" src="./wolfy.jpeg" alt="wolfpic" />
+				
+				<img className="wolflogo" src="./wolfy.jpeg" alt="wolfpic" /> 
+				{/* <div className='bottom-center'>SeaWolf Crypto</div> */}
 				<h1 className="crypto-text"> Search Your Favorite Crypto </h1>
 				<form>
 					<input type="text" placeholder="Search" className="crypto-input" onChange={handleChange} />
@@ -60,4 +62,4 @@ function App() {
 
 export default App;
 
-// I could return a spread of coin instead of listing evererything out possibly?
+// I could return a spread of crypto instead of listing evererything out possibly?
