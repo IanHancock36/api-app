@@ -65,34 +65,35 @@ const Crypto = ({ name, price, symbol, marketcap, volume, image, priceChange }) 
  					<tr scope='row'>
 
 
- 						<th className="text-center">Img</th>
- 						<th  colSpan="250"className="text-center">Name</th>
- 						<th  colSpan="250"className="text-center">Price</th>
- 						<th colSpan="250" className="text-center">Change</th>
- 						<th  colSpan="250"className="text-center">Volume</th>
- 						<th  colSpan="250"className="text-center">Mkt Cap</th>
+ 						<th></th>
+ 						<th  >Name</th>
+ 						<th  >Price</th>
+ 						<th >Change</th>
+ 						<th  >Volume</th>
+ 						<th  >Mkt Cap</th>
+					</tr>
 
- 					</tr>
+ 					
 
  				</thead>
  				<tbody>
 
  					<tr scope = 'row'>
 
- 				
+ 					
 
- 						<td className="text-center">
+ 						<td  >
  							<img className="cell-image" src={image} />
  						</td>
- 						<td colSpan="250" className="text-center"> {name}</td>
- 						<td  colSpan="250"className="text-center"> ${price.toLocaleString()}</td>
- 						<td  colSpan="250" className="text-center">
+ 						<td  className='table-cell'> {name}</td>
+ 						<td className='table-cell' > ${price.toLocaleString()}</td>
+ 						<td className='table-cell' >
  							<p className={priceChange < 0 ? 'percent-red' : 'percent-green'}>
  								{priceChange.toLocaleString(2)}%
  							</p>
  						</td>
- 						<td  colSpan="250"className="text-center"> ${volume.toLocaleString(undefined)}</td>
- 						<td  className="text-center"> ${marketcap.toLocaleString()}</td>
+ 						<td className='table-cell' > ${volume.toLocaleString(undefined)}</td>
+ 						<td className='table-cell' > ${marketcap.toLocaleString()}</td>
 
 		
  					</tr>

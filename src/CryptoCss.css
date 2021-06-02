@@ -1,8 +1,8 @@
 
-*{
+/* *{
   box-sizing: border-box;
-}
-.table{
+} */
+/* .table{
   width: 100%;
   border-collapse: collapse;
 }
@@ -14,10 +14,10 @@
   font-size: 16px;
 }
 .table th{
-  background: gray;
+  background:#36454F;
   
   color: #ffff;
-}
+} */
 
 
 
@@ -25,6 +25,11 @@
     height: 25px;
     width: 25px;
     /* margin-right: 2rem; */
+  }
+
+  .table-cell{
+    min-width: 150px;
+    padding: right-auto;
   }
   .percent-red {
     color: red;
