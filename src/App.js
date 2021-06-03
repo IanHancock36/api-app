@@ -8,6 +8,7 @@ import StripeStore from './StripeStore';
 function App() {
 	const [ cryptos, setCryptos ] = useState([]);
 	const [ search, setSearch ] = useState('');
+	// const [sort , handleSort] = useState('')
 	useEffect(() => {
 		axios
 			.get(
@@ -24,17 +25,16 @@ function App() {
 		console.log(event.target.value);
 	};
 
-
 	const handleText = debounce((text) => {
 		setSearch(text);
-	},500);
+	}, 500);
+
 	const filteredCryptos = cryptos.filter((crypto) => crypto.name.toLowerCase().includes(search.toLowerCase()));
 	return (
 		<div className="app">
 			<div className="crypto-search">
+				<img className="wolflogo" src="./wolfy.jpeg" alt="wolfpic" />
 				
-				<img className="wolflogo" src="./wolfy.jpeg" alt="wolfpic" /> 
-				{/* <div className='bottom-center'>SeaWolf Crypto</div> */}
 				<h1 className="crypto-text"> Search Your Favorite Crypto </h1>
 				<form>
 					<input type="text" placeholder="Search" className="crypto-input" onChange={handleChange} />
@@ -62,4 +62,7 @@ function App() {
 
 export default App;
 
-// I could return a spread of crypto instead of listing evererything out possibly?
+
+
+// make a handleclick button for handleSort and sort in ascending and descending order.
+//

@@ -1,14 +1,13 @@
 import React from 'react';
 import { Table } from 'reactstrap';
-// import './cryptoItem.modules.css';
-import './CryptoCss.css';
+import './Crypto.css';
 
 // this is destructuring the data below. destructuring object passed as an argument in the function.
 const Crypto = ({ name, price, symbol, marketcap, volume, image, priceChange }) => {
 	return (
 		<Table responsive>
 			<thead>
-				<tr className="table-header" scope="row">
+				<tr>
 					<th />
 					<th>Name</th>
 					<th>Price</th>
@@ -18,9 +17,9 @@ const Crypto = ({ name, price, symbol, marketcap, volume, image, priceChange }) 
 				</tr>
 			</thead>
 			<tbody>
-				<tr scope="row">
+				<tr>
 					<td>
-						<img className="cell-image" src={image} />
+						<img className="cell-image" alt='coinImage' src={image} />
 					</td>
 					<td className="table-cell"> {name}</td>
 					<td className="table-cell"> ${price.toLocaleString()}</td>
@@ -39,4 +38,4 @@ const Crypto = ({ name, price, symbol, marketcap, volume, image, priceChange }) 
 
 export default Crypto;
 
-/// the best solution prob is to make a grid then shrink to columns. table is not as responsive
+
