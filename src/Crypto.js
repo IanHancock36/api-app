@@ -5,7 +5,7 @@ import './Crypto.css';
 // this is destructuring the data below. destructuring object passed as an argument in the function.
 const Crypto = ({ name, price, symbol, marketcap, volume, image, priceChange }) => {
 	return (
-		<Table responsive>
+		<Table   responsive>
 			<thead>
 				<tr>
 					<th />

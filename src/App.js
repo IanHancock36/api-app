@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Crypto from './Crypto';
 import './App.modules.css';
 import { debounce } from 'lodash';
-import StripeStore from './StripeStore';
+// import StripeStore from './StripeStore';
 
 function App() {
 	const [ cryptos, setCryptos ] = useState([]);
