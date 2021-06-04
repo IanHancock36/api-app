@@ -9,12 +9,11 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "autoprefixer": "^10.2.6",
     "axios": "^0.21.1",
-   
     "install": "^0.13.0",
     "lodash": "^4.17.21",
     "react": "^17.0.2",
-   
     "react-dom": "^17.0.2",
     "react-scripts": "^1.1.5",
     "reactstrap": "^8.9.0",
@@ -33,9 +32,7 @@
     ]
   },
   "browserslist": {
-    "production": [
-      
-    ],
+    "production": [],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
@@ -50,6 +47,4 @@
     "react-refresh": "^0.10.0",
     "webpack": "^5.37.1"
   }
-
- 
 }
