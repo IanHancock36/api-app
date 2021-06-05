@@ -15,7 +15,7 @@ function App() {
 				'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'
 			)
 			.then((res) => {
-				setCryptos(res.data);
+				setCryptos(res.data.sort((a,b)=>a.name.localeCompare(b.name)));
 			})
 			.catch((error) => console.log(error));
 	}, []);
@@ -34,25 +34,35 @@ function App() {
 // 		   b.name - a.name
 // 	   })
 //    } 
- const handleClick = [...cryptos].sort((a,b)=>{
-	 return a.name - b.name 
-	 console.log('firing off`')
- })
+//  const handleClick = [...cryptos].sort((a,b)=>{
+// 	 return a.name - b.name 
+// 	 console.log('firing off`')
+//  })
+//    const handleClick = (a,b) => {
+// 	  cryptos.sort((a,b) => {
+// 		  return a.name -b.name
+// 		  console.log('this is firing')
 
+// 	  })
+//    }
  
+//   {[...data].sort((a,b) => a.name.localCompare(b.name)).filter}
+
 
 	
 	const filteredCryptos = cryptos.filter((crypto) => crypto.name.toLowerCase().includes(search.toLowerCase()));
 	return (
 		<div className="app">
 			<div className="crypto-search">
+			
 				<img className="wolflogo" src="./wolfy.jpeg" alt="wolfpic" />
 				
 				<h1 className="crypto-text"> Search Your Favorite Crypto </h1>
 				<form>
 					<input type="text" placeholder="Search" className="crypto-input" onChange={handleChange} />
-				<button onClick={handleClick}> sort by Name </button>
+					{/* <button onClick={handleClick}> sort by Name </button> */}
 				</form>
+				
 			</div>
 
 			{filteredCryptos.map((crypto) => {
