@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Crypto from './Crypto';
 import './App.modules.css';
-import { debounce } from 'lodash';
+import { debounce, orderBy } from 'lodash';
 // import StripeStore from './StripeStore';
 
 function App() {
@@ -29,6 +29,19 @@ function App() {
 		setSearch(text);
 	}, 500);
 
+//    constsortByPrice = ( )=> {
+// 	   const sortCrypto = cryptos.sort((a,b) =>{
+// 		   b.name - a.name
+// 	   })
+//    } 
+ const handleClick = [...cryptos].sort((a,b)=>{
+	 return a.name - b.name 
+	 console.log('firing off`')
+ })
+
+ 
+
+	
 	const filteredCryptos = cryptos.filter((crypto) => crypto.name.toLowerCase().includes(search.toLowerCase()));
 	return (
 		<div className="app">
@@ -38,6 +51,7 @@ function App() {
 				<h1 className="crypto-text"> Search Your Favorite Crypto </h1>
 				<form>
 					<input type="text" placeholder="Search" className="crypto-input" onChange={handleChange} />
+				<button onClick={handleClick}> sort by Name </button>
 				</form>
 			</div>
 
@@ -52,7 +66,10 @@ function App() {
 						image={crypto.image}
 						priceChange={crypto.price_change_percentage_24h}
 						volume={crypto.market_cap}
+					
 					/>
+
+					
 				);
 			})}
 			{/* <StripeStore /> */}

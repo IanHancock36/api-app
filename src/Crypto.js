@@ -7,6 +7,7 @@ const Crypto = ({ name, price, symbol, marketcap, volume, image, priceChange }) 
 	return (
 		<Table   responsive>
 			<thead>
+			
 				<tr>
 					<th />
 					<th>Name</th>
