@@ -1,6 +1,6 @@
 import React from 'react';
 import { Table } from 'reactstrap';
-import './Crypto.css';
+import './Crypto.css'
 
 // this is destructuring the data below. destructuring object passed as an argument in the function.
 const Crypto = ({ name, price, symbol, marketcap, volume, image, priceChange }) => {
